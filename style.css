@@ -5,23 +5,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+ 
+ 
   }
 
   kbd {
-      font-size: 1  .9em;
+    font-size: 1  .9em;
     border-radius: 3px;
     padding: 1px 2px 0;
-    border: 1px solid black;
-    background: rgb(223, 210, 168);
+    border: 1px solid white;
+    background: black;
     margin:auto;
   }
   
   .title {
-    color: #444;
+    color: white;
     text-transform: uppercase;
-    margin-top: 3em;
+    margin-top: 1em;
     margin-bottom: 3em;
     font-size: 1em;
     letter-spacing: 0.3em;
@@ -30,28 +30,39 @@ body {
   .keyboard {
     display: flex;
     flex-direction: column;
+    min-height: 2em;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.5rem;
+    
   }
   
   .row {
     list-style: none;
     display: flex;
+    height: 2rem;
   }
+
+  
+
+
   
   li {
-    height: 3em;
-    width: 3em;
-    color: rgba(0,0,0,0.7);
-    border-radius: 0.4em;
-    line-height: 3em;
-    letter-spacing: 1px;
-    margin: 0.4em;
-    transition: 0.3s;
+    /* margin: 0 15rem; */
+    height: 4em;
+    width: 4.5em;
+    color: white;
+    border-radius: 0.1em;
+    letter-spacing: .3px;
+    margin: 0.1em;
+    padding:.2rem;
     text-align: center;
-    font-size: 1em;
-  }
+    font-size: .3em;
+    border: solid white 1px ;
+}
   
   #tab {
-    width: 5em;
+    width: 4.7em;
   }
   
   #caps {
@@ -75,54 +86,52 @@ body {
   }
   
   .pinky { 
-    background-color: rgb(103, 20, 220);
-    border: 2px solid rgb(103, 20, 220);
+    background-color: #6714dc;
+    border: 1px solid white;
+    border-radius: 5px;
   }
-  .pinky.selected {
-    color: rgb(103, 20, 220);
-  }
+ 
   
   .ring { 
-    background-color: rgb(240, 80, 255);
-    border: 2px solid rgb(240, 80, 255);
+    background-color: #f050ff;
+    border: 1px solid white;
+    border-radius: 5px;
   }
-  .ring.selected {
-    color: rgb(240, 80, 255);
-  }
+  
   
   .middle { 
-    background-color: rgb(140, 13, 121);
-    border: 2px solid rgb(140, 13, 121);
+    background-color: #8c0d79;
+    border: 1px solid white;
+    border-radius: 5px;
   }
-  .middle.selected {
-    color: rgb(140, 13, 121);
-  }
+ 
   
   .pointer1st { 
-    background-color: rgb(0, 123, 255);
-    border: 2px solid rgb(0, 123, 255);
+    background-color: #007bff;
+    border: 1px solid white;
+    border-radius: 5px;
   }
-  .pointer1st.selected {
-    color: rgb(0, 123, 255);
-  }
+ 
   
   .pointer2nd { 
-    background-color: rgb(157, 240, 140);
-    border: 2px solid rgb(157, 240, 140);
+    background-color: #9df08c;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: #082802;
   }
-  .pointer2nd.selected {
-    color: rgb(157, 240, 140);
-  }
-  
+ 
   .fill-out-key {
-    background-color: slategrey;
-    border: 2px solid slategrey;
+    background-color: #708090;
+    border: 1px solid white;
+    border-radius: 5px;
   }
   
   .selected {
-    background-color: transparent;
-        -webkit-animation: vibrate-1 0.3s linear infinite both;
-              animation: vibrate-1 0.3s linear infinite both;
+    border-radius: 5px;
+  }
+
+  #seconds{
+    color:#9df08c;
   }
   
   /* ----------------------------------------------
@@ -158,55 +167,3 @@ body {
     }
   }
   
-  @-webkit-keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
-  @keyframes vibrate-1 {
-    0% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-    20% {
-      -webkit-transform: translate(-2px, 2px);
-              transform: translate(-2px, 2px);
-    }
-    40% {
-      -webkit-transform: translate(-2px, -2px);
-              transform: translate(-2px, -2px);
-    }
-    60% {
-      -webkit-transform: translate(2px, 2px);
-              transform: translate(2px, 2px);
-    }
-    80% {
-      -webkit-transform: translate(2px, -2px);
-              transform: translate(2px, -2px);
-    }
-    100% {
-      -webkit-transform: translate(0);
-              transform: translate(0);
-    }
-  }
