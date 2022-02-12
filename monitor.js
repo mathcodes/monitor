@@ -35,23 +35,23 @@ document.addEventListener('keydown', function(event) {
   }
 });
 
-document.addEventListener("keyup", (event) => {
-  const keyPressed = String.fromCharCode(event.keyCode);
-  const keyElement = document.getElementById(keyPressed);
-  const highlightedKey = document.querySelector(".selected");
+// document.addEventListener("keyup", (event) => {
+//   const keyPressed = String.fromCharCode(event.keyCode);
+//   const keyElement = document.getElementById(keyPressed);
+//   const highlightedKey = document.querySelector(".selected");
 
-  keyElement.classList.add("hit");
-  keyElement.addEventListener("animationend", () => {
-    keyElement.classList.remove("hit");
-  });
+//   keyElement.classList.add("hit");
+//   keyElement.addEventListener("animationend", () => {
+//     keyElement.classList.remove("hit");
+//   });
 
-  if (keyPressed === highlightedKey.innerHTML) {
-    timestamps.unshift(getTimestamp());
-    const elapsedTime = timestamps[0] - timestamps[1];
-    console.log(`Character per minute ${60 / elapsedTime}`);
-    highlightedKey.classList.remove("selected");
-    targetRandomKey();
-  }
-});
+//   if (keyPressed === highlightedKey.innerHTML) {
+//     timestamps.unshift(getTimestamp());
+//     const elapsedTime = timestamps[0] - timestamps[1];
+//     console.log(`Character per minute ${60 / elapsedTime}`);
+//     highlightedKey.classList.remove("selected");
+//     targetRandomKey();
+//   }
+// });
 
-targetRandomKey();
+// targetRandomKey();

@@ -24,6 +24,7 @@ wordInput.disabled = true
 const easy = document.querySelector('.easy')
 const medium = document.querySelector('.medium')
 const hard = document.querySelector('.hard')
+
 easy.onclick = function () {
   if (instructions.style.display !== "none") {
     instructions.style.display = "none";
@@ -43,7 +44,6 @@ easy.addEventListener('click', () => {
   wordInput.disabled = false
   medium.disabled = true
   hard.disabled = true
-  
 })
 
 medium.addEventListener('click', () => {
@@ -63,7 +63,7 @@ hard.addEventListener('click', () => {
 wordInput.addEventListener('focus', init)
 var countdownInterval, checkStatusInterval
 function init() {
-  seconds.innerHTML = time
+  
   showWord(words)
   wordInput.addEventListener('input', startMatch)
   countdownInterval = setInterval(countdown, 1000)
@@ -76,6 +76,7 @@ function showWord(words) {
 }
 
 function startMatch() {
+  seconds.innerHTML = time
   if(matchWords()) {
     console.log("matchWord",score);
     isPlaying = true
@@ -98,7 +99,7 @@ function matchWords() {
     message.innerHTML = 'Correct!!!'
     return true
   } else {
-    message.innerHTML = ''
+    message.innerHTML = ' '
     return false
   }
 }
@@ -111,17 +112,25 @@ function countdown() {
     isPlaying = false
     clearInterval(countdownInterval)
   }
-
+  timeDisplay.style.color = "#28a745"
   timeDisplay.innerHTML = time
+  countdownWarn();
+}
+
+function countdownWarn() {
+  if(time < 5) {
+    timeDisplay.style.color = "#ea3e2c"
+  }
 }
 
 function checkStatus() {
   if(!isPlaying && time === 0) {
+    
     message.innerHTML = 'Game Over!!!'
     wordInput.value = ''
     wordInput.disabled = true
-    console.log("checkStatus", score);
-    score = 0
+    // console.log("checkStatus", score);
+    score = 0 
     easy.disabled = false
     medium.disabled = false
     hard.disabled = false
