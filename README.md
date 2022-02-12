@@ -1,6 +1,10 @@
-# keyboard-input
-A quick project to review event handlers and do something I've been meaning to for long enough.
+# Monitor
+A quick project to review event handlers and do something I've been meaning to for long enough. That was then... now this sucker has timed training, a new and improved UI and more to come!!! Got any ideas? Fork and sumbit PRs or hit me up!
 
+Updated Version 2:
+<img src="https://raw.githubusercontent.com/mathcodes/monitor/main/sBs.png" width="70%" />
+
+Version 1:
 <img src="https://raw.githubusercontent.com/mathcodes/monitor/main/keys.png" width="70%" />
 
 ## Contact
