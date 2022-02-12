@@ -1,4 +1,4 @@
-# [Monitor](mathcodes.github.io/monitor/)
+# [Monitor](https://mathcodes.github.io/monitor/)
 A quick project to review event handlers and do something I've been meaning to for long enough. That was then... now this sucker has timed training, a new and improved UI and more to come!!! Got any ideas? Fork and sumbit PRs or hit me up!
 
 Updated Version 2:
